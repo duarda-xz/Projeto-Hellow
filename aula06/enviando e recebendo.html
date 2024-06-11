@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style02.css">
+    <link rel="stylesheet" href="resultado.html">
+</head>
+<body>
+    
+    <!--Formulário de Inscrição para o Clube de Aventuras-->
+<form id="meuFormulario">
+
+    <!--Campo de entrada paea o nome-->
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+
+    <!--Campo de Entrada para a idade-->
+    <label for="idade">Idade:</label>
+    <input type="number" id="idade" name="idade" placeholder="Digite sua idade">
+
+    <!--Área de texto para sua mensagem-->
+    <label for="mensagem">Por que você quer se juntar ao clube?</label>
+    <textarea id="mensagem" name="Mensagem" placeholder="Escreva uma mensagem"></textarea>
+
+    <!--Lista de opções para selecionar uma aventura favorita-->
+    <label for="aventura">Aventura favorita:</label>
+    <select id="aventura" name="aventura">
+        <option value="explorar floresta">Explorar a floresta</option>
+        <option value="mergulho">Mergulhar</option>
+        <option value="escalada">Escalar</option>
+    </select>
+
+    <!--Botão para enviar o formulário-->
+    <button type="submit">Enviar</button>
+</form>
+
+
+<!--JavaScript-->
+<script>
+
+// Capturando o formulário pelo ID
+const form = document.getElementById ('meuFormulario')
+
+// Adicionando um event listener para o evento de submissão do formulário
+form.addEventListener ('submit',function (event) {
+  // Prevenir o comportamento padrão de envio de formulário
+  event.preventDefault();
+
+  // Capturar os dados do formulário
+  const name = document.getElementById ('nome').value;
+  const idade = document.getElementById ('idade').value;
+  const mensagem = document.getElementById ('mensagem').value;
+  const aventura = document.getElementById ('aventura').value;
+
+  // Redirecionar para outra página HTML com os dados na URL
+  window.location.href = `resultado.html?nome=${encodeURIComponent(name)}&idade=${encodeURIComponent(idade)}&mensagem=${encodeURIComponent(mensagem)}&aventura=${encodeURIComponent(aventura)}`; 
+ });
+</script>
+
+</body>
+</html>

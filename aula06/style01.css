@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header,
+footer {
+    background-color: #fd34f3a4;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    margin: 20px 0;
+}
+
+aside {
+    background-color: #ec98e8;
+    padding: 20px;
+    width: 20%;
+}
+
+section {
+    margin: 20px;
+    width: 75%;
+}
+
+article {
+    border: 1px solid #62508b;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+table,
+th,
+tr,
+td {
+    border: 1px solid rgb(87, 27, 87);
+    border-collapse: collapse;
+    font-size: larger;
+    font-family: cursive;
+}
+
+th {
+    background-color: plum;
+
+}
